@@ -16,10 +16,9 @@ back_to_dict = json.loads(einstein_json)
 print(einstein_json)
 pprint(back_to_dict)
 
-with open("laureates.csv", "r") as f:
+with open("Ex_Files/03_04/laureates.csv", "r") as f:
     reader = csv.DictReader(f)
     laureates = list(reader)
-
 
 # 1. you can access parts of strings the same way you do lists
 #      hey[2] == "y"
@@ -28,7 +27,11 @@ with open("laureates.csv", "r") as f:
 
 laureates_beginning_with_a = []
 # LinkedIn learner code here
+for laureate in laureates:
+    if laureate['name'][0]== 'A':
+        laureates_beginning_with_a.append(laureate)
+print(laureates_beginning_with_a)
 
-
-with open("laureates.json", "w") as f:
+with open("Ex_Files/03_04/laureates.json", "w") as f:
     json.dump(laureates_beginning_with_a, f, indent=2)
+

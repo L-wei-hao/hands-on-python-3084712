@@ -13,7 +13,7 @@ EINSTEIN = {
     "motivation": "for his services to Theoretical Physics...",
 }
 
-with open("laureates.csv", "r") as f:
+with open("/workspaces/hands-on-python-3084712/Ex_Files/03_02_begin/laureates.csv", "r") as f:
     reader = csv.DictReader(f)
     laureates = list(reader)
 
@@ -22,6 +22,6 @@ for laureate in laureates:
         pprint(laureate)
         print("============")
         year_date = datetime.strptime(laureate["year"], "%Y")
-        born_date = datetime.strptime(laureate["born"], "%Y-%m-%d")
+        born_date = datetime.strptime(laureate["born"],'%Y-%m-%d')
         print("age", year_date.year - born_date.year)
         break

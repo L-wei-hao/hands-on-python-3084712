@@ -10,12 +10,10 @@ for name in NAMES:
     print(name)
 
 for name, age in zip(NAMES, AGES):
-    print(f"{name} {age}")
-
-for name in reversed(NAMES):
-    print(name)
+    print(f'{name} {age}')
 
 for i in range(5):
     print(i)
-
 # enumerate
+for i, name in enumerate(NAMES):
+    print(f'{i} {name}')

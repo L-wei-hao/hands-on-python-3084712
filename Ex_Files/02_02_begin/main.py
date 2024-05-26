@@ -3,10 +3,13 @@ extened_grt = "Hello World, " + "this is a long string"
 
 name = "John"
 
-intrupution = f"Hello {name}"
+interuption = f'Hello {name}'  #f string
 
-greet_format = "Hello {}"
-
+greet_format = 'Hello {}'      #template for formatting
 formatted = greet_format.format(name)
 
-print(intrupution, formatted)
+print(interuption,formatted)
+
+print(formatted.upper())
+print(formatted.lower())
+print(formatted.replace('John','weihao'))
